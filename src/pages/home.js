@@ -3,6 +3,8 @@ import Page from '../components/pageScrolling';
 import TituloPage from '../components/titlePages';
 import Cards from '../components/cards';
 import '../assets/css/stylescontent.css';
+import '../App.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAtom,faCircleDollarToSlot } from '@fortawesome/free-solid-svg-icons';
 import Whyus from '../components/whyus';
@@ -11,20 +13,33 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { useAnimation, motion,useViewportScroll, useTransform } from "framer-motion";
-
 import { useInView } from "react-intersection-observer";
+
 const now = 100;
 
 const toRigthVariants = {
   toRigth: { x: 0, transition: { duration: 2,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
-  hidden: { x:-550, opacity: 0 }
+  hidden: { x:-30, opacity: 0 }
 };
 
 const toLeftVariants = {
   toLeft: { x: 0, transition: { duration: 2,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
-  hidden: { x:+550, opacity: 0 }
+  hidden: { x:30, opacity: 0 }
+};
+const opacitycard1Variants = {
+  opacityC1: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
+  hidden: {  opacity: 0 }
 };
 
+const opacitycard2Variants = {
+  opacityC2: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
+  hidden: {  opacity: 0 }
+};
+
+const opacitycard3Variants = {
+  opacityC3: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
+  hidden: {  opacity: 0 }
+};
 const opacityVariants = {
   visible: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
   hidden: {  opacity: 0 }
@@ -206,6 +221,10 @@ const HomePage = () => {
   const Opacity = useAnimation();
   const toLeft = useAnimation();
   const opacityAndScale = useAnimation();
+  const opacityC1= useAnimation();
+  const opacityC2 = useAnimation();
+  const opacityC3 = useAnimation();
+ 
   const [ref, inView] = useInView();
 
   useEffect(() => {
@@ -214,9 +233,11 @@ const HomePage = () => {
       Opacity.start("visible");
       toLeft.start("toLeft");
       opacityAndScale.start("opacityAndScale");
-   
+      opacityC1.start("opacityC1");
+      opacityC2.start("opacityC2");
+      opacityC3.start("opacityC3");
     }
-  }, [toRigth,Opacity,toLeft,opacityAndScale, inView]);
+  }, [toRigth,Opacity,toLeft,opacityAndScale, opacityC1,opacityC2, opacityC3, inView]);
 
 
 
@@ -231,7 +252,7 @@ const HomePage = () => {
              <TituloPage titulo="For businesses.">
             </TituloPage>
             <div className="div-cards">
-           <Cards titulo="Management" iconC={icon} linkCard="/management"   bodyText="Simplify your work"></Cards>
+            <Cards titulo="Management" iconC={icon} linkCard="/management"   bodyText="Simplify your work"></Cards>
             <Cards titulo="Invest" iconC={iconD} linkCard="/invest" bodyText="Global investors"></Cards>
             <Cards titulo="Advisor" iconC={icon} linkCard="/advisor" bodyText="Support our startup"></Cards>
             </div> 

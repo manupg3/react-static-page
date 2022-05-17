@@ -5,9 +5,11 @@
  text-align: center;
  padding: 4%;
  padding-top: 7%;
- padding-bottom: 7%;
+ padding-bottom: 4%;
 }
-
+.div-subtitle-page{
+    padding-bottom: 6%;
+}
 .title-pages{
     font-family: 'Roboto', sans-serif;
     font-size: 130px;
@@ -36,9 +38,16 @@
     text-decoration: none !important;
     color: black !important;
 }
+.subtitle-page{
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-weight: 500;
+}
 .cards:hover{
   
-    box-shadow: 1px 1px 10px 1px #c2c2c2;
+    box-shadow: 1px 10px 20px 1px #c2c2c28f;
 
 }
 .buttons-cards{
@@ -101,7 +110,7 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2.5px solid black !important;
+    border-bottom: 2.5px solid rgb(0, 57, 243) !important;
 }
 .card-b-header {
     display: flex;
@@ -157,6 +166,8 @@
 .statistics{
     margin-top: 12%;
     margin-bottom: 9%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 .st-row{
     flex-direction: row;
@@ -247,11 +258,20 @@ canvas{
     border: 1.5px solid black !important;   
 }
 
+@media screen and (max-width:767px) {
+      
+        .content {
+            width: fit-content;
+    }
+      
+}
+
 @media screen and (max-width:1220px) {
     .div-cards{
     display:none;
         
     }
+
     .st-row{
        flex-direction: column !important;
     }

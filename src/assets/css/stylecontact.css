@@ -1,0 +1,46 @@
+.div-contact-form{
+    text-align: center;
+    margin-bottom: 15%;
+}
+.contact-form{
+
+}
+.label-inp{
+    position:absolute;
+}
+.field-consult{
+    width: 100% !important;
+    margin-top: 1%;
+}
+h3.title-contact-form {
+    padding-bottom: 1.5%;
+    padding-left: 24%;
+    padding-right: 24%;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.fields-form {
+    display: inline-grid;
+    box-shadow: 1px 9px 20px 1px #c2c2c269;
+    padding: 3%;
+    padding-right: 5%;
+    border-radius: 5px;
+    padding-left: 5%;
+}
+.fields-form input{
+    margin-bottom: 7%;
+    width: 300px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+}
+.fields-form input:focus-visible{
+border-bottom: 1px solid black !important;
+outline: none !important;
+}
+.btn-form {
+    padding-top: 3% !important;
+    padding-bottom: 3% !important;
+    margin-top: 4%;
+}

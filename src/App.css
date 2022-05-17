@@ -1,8 +1,22 @@
+
 .App {
   text-align: center;
   background: #fafafa;
 }
+.content{
+  padding-top: 5%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
 
+.header{
+  position: fixed !important;
+  top: 0 !important;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus{
+  box-shadow: none !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -3,6 +3,10 @@
     padding-bottom: 19px !important;
 border-bottom: 1px solid #6c757d45;
 font-weight: 400;
+position: fixed !important;
+top: 0 !important;
+width: 100% !important;
+z-index: 1000;
 }
 button.navbar-toggler.collapsed{
     background: black !important;

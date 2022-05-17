@@ -13,10 +13,10 @@ const getBasename = path => substr(lastIndexOf('/')(path))(0)(path);
 
 const App = () => {
     return (
-        <div>
+        <div className='content'>
            
                 <Router>
-                <Header />
+                <Header className="header"/>
 
                     <RoutesApp />
                     <FooterPage />

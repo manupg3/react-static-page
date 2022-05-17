@@ -1,5 +1,7 @@
 import React from 'react';
 import Page from '../components/pageScrolling';
+import FormPage from '../components/formpage';
+import TitlePage from '../components/titlePages';
 /**
  * Application home page component
  * @returns {JSX}
@@ -7,13 +9,10 @@ import Page from '../components/pageScrolling';
 const ContactPage = () => {
 
     return (
-        <>  <Page>
-          
-            <h1>Hello world!</h1>
-            <p>
-                I am a ContactPage!
-            </p>
-            </Page>
+        <>  
+       <TitlePage titulo="Talk with us."></TitlePage>   
+          <FormPage></FormPage>
+       
         </>
     );
 };

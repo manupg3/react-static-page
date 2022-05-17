@@ -1,18 +1,38 @@
 import React from 'react';
 import Page from '../components/pageScrolling';
-/**
- * Application home page component
- * @returns {JSX}
- */
+import TituloPage from '../components/titlePages';
+import Tabs from '../components/tabs';
+import SubtitlePage from '../components/subtitlePage';
+import {motion} from 'framer-motion';
+
 const AdvisorPage = () => {
 
+    const subtitle = "we connect you with highly prestigious advisors.";
+
+const titleTabs = ["We connect","know your process","improvements"]
+const textTabs = ["we connect you with an advisor","The advisor integrates the processes of your company"
+                 ,"The advisor proposes optimizations and improvements"]
+
     return (
+
         <>  <Page>
-          
-            <h1>Hello world!</h1>
-            <p>
-                I am a AdvisorPage!
-            </p>
+          <TituloPage titulo="Advisor.">
+              </TituloPage>
+              <div className='text-center div-subtitle-page'>
+         <SubtitlePage subtitulo={subtitle} />  
+         <motion.button 
+           initial={{  opacity: 0,
+            scale: 0.8}
+            }
+             animate={{
+                 opacity: 1,
+                 scale:1,       
+             }}
+             transition={{ duration: 3,type: "spring" ,ease:'easeInOut', delay:0.9}}
+                
+         className='whyus-button btn btn-primary'>Talk with us.</motion.button>       
+      </div>
+              <Tabs  titleTabs={titleTabs} textTabs={textTabs}/>
             </Page>
         </>
     );

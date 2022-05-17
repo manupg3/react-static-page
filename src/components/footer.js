@@ -14,7 +14,7 @@ export default function footer
      </div>
      <div className='principal-footer'>
      <div className=''>
-            <div className="content">
+            <div className="">
           
   <div className="row principal">
     <div className="col-sm" >
