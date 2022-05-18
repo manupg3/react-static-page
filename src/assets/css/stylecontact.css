@@ -49,4 +49,8 @@ outline: none !important;
     .fields-form input{
         width: 100%;
     }
+    .fields-form
+    {
+        padding: 6%;
+    }
 }

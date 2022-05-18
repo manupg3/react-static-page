@@ -30,3 +30,16 @@
     color: rgb(0, 57, 243) !important;
     font-weight: 700 !important;
 }
+@media screen and (max-width:767px){
+   .chart-pages{
+       display: none ;
+   }
+    .div-tab{ 
+       padding: 5%;
+      margin-left: 7%;
+      margin-right: 7%;
+     }
+     .text-tabs{
+         font-size: 1rem;
+     }
+}
