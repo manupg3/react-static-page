@@ -26,6 +26,16 @@ const toRigthVariants2 = {
     visible: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
     hidden: {  opacity: 0 }
   };
+  
+  const opacityVariants2 = {
+    visible2: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
+    hidden: {  opacity: 0 }
+  };
+  const opacityVariants3 = {
+    visible3: { transition: { duration: 5,type: "spring" ,ease:'easeInOut',delay:0.2}, opacity: 1 },
+    hidden: {  opacity: 0 }
+  };
+  
 
 const HowItWorks = () => {
 
@@ -33,6 +43,8 @@ const HowItWorks = () => {
     const toRigth2 = useAnimation();
     const toLeft = useAnimation();
     const opacity = useAnimation()
+    const opacity2 = useAnimation()
+    const opacity3 = useAnimation()
 
    
 
@@ -54,20 +66,26 @@ const HowItWorks = () => {
 
     }
       if (inviewNStep1) {
-        console.log("Estoy visible");
+
         opacity.start("visible");   
       
+    }
+    if(inviewNStep2)
+    {
+
+        opacity2.start("visible2");
+
     }
        
       
     if(inviewStep2){
-          console.log("Estoy visible N2");
+
         toLeft.start("toLeft");
       
       }
       if (inviewNStep2) {
        
-        opacity.start("visible");   
+        opacity2.start("visible");   
       
     }
        
@@ -79,12 +97,12 @@ const HowItWorks = () => {
       }
       if (inviewNStep3) {
        
-        opacity.start("visible");   
+        opacity3.start("visible3");   
       
     }
        
     
-    }, [toRigth, toLeft, toRigth2,inviewStep2,inviewStep3,inviewNStep1,inviewNStep2,inviewNStep3,inView]);
+    }, [toRigth, toLeft,opacity2,opacity3, toRigth2,inviewStep2,inviewStep3,inviewNStep1,inviewNStep2,inviewNStep3,inView]);
 
     const subtitle = "Our process is fast and simple. Leave with us.";
 
@@ -120,7 +138,6 @@ const HowItWorks = () => {
                   animate={toRigth}
                   initial="hidden"
                   variants={toRigthVariants} 
-                  viewport={{once:true }} 
                   className='text-center text-steps'>
                     <h3 className=''>Knowing your business</h3>
                     <p className='description-steps'>First we must know all the processes of your business to define the action plan</p>
@@ -143,9 +160,9 @@ const HowItWorks = () => {
                 <Col  xs={6} className='col-2-a'>
                 <motion.h2 
                  ref={refStepN2}   
-                 animate={opacity}
+                 animate={opacity2}
                  initial="hidden"
-                 variants={opacityVariants} 
+                 variants={opacityVariants2} 
                >2</motion.h2>
                        </Col>
                 <Col className='col-2-b'> 
@@ -157,7 +174,7 @@ const HowItWorks = () => {
                   className='text-center text-steps'>
                     <h3 className=''>Knowing your business</h3>
                     <p className='description-steps'>First we must know all the processes of your business to define the action plan</p>
-                    <button className='btn btn-primary whyus-button'>
+                    <button className='btn btn-primary me-button'>
                         Learn more 
                     </button>   
                      </motion.div></Col>
@@ -181,9 +198,9 @@ const HowItWorks = () => {
                   </Col>
                 <Col className='col-3-b'><motion.h2 
                  ref={refStepN3}   
-                 animate={opacity}
+                 animate={opacity3}
                  initial="hidden"
-                 variants={opacityVariants} 
+                 variants={opacityVariants3} 
                >3</motion.h2></Col>
             </Row>
             </div>

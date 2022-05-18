@@ -135,7 +135,7 @@ const Statistics = () => {
      initial="hidden"
      variants={toLeftVariants}   
     className="col-sm st-col">
-    <Doughnut data={data} />
+    <Doughnut className='chart-home' data={data} />
     </motion.div>
   </div>
 </div>

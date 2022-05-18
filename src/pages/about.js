@@ -1,15 +1,14 @@
 import React from 'react';
 import Page from '../components/pageScrolling';
+import TitlePage from '../components/titlePages';
 
 const AboutPage = () => {
 
     return (
         <>  <Page>
           
-            <h1>Hello world!</h1>
-            <p>
-                I am a AboutPage!
-            </p>
+          <TitlePage titulo="Our Story."></TitlePage>   
+
             </Page>
         </>
     );

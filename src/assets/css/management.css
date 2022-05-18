@@ -6,10 +6,11 @@
     padding-bottom: 3%;
     box-shadow: 1px 10px 20px 1px #c2c2c28f;
     border-radius: 5px;
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-top: 5%;
+    margin-bottom: 6%;
     padding-right: 3%;
     padding-left: 3%;
+    background: white !important;
 }
 .fade {
     transition: opacity 0.89s linear !important;

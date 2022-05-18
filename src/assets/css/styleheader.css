@@ -8,6 +8,7 @@ top: 0 !important;
 width: 100% !important;
 z-index: 1000;
 }
+
 button.navbar-toggler.collapsed{
     background: black !important;
     width: 60px;
@@ -64,6 +65,14 @@ div#responsive-navbar-nav{
         font-size: 23px;
         font-weight: 600;
         padding: 1% !important;
+    }
+    .navbar{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 10px;
+    }
+    .container, .container-sm{
+        max-width: 100% !important;
     }
     
 }

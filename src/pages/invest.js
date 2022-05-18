@@ -4,6 +4,7 @@ import TituloPage from '../components/titlePages';
 import Tabs from '../components/tabs';
 import SubtitlePage from '../components/subtitlePage';
 import {motion} from 'framer-motion';
+import { BarChart } from '../components/charts';
 
 const InvestPage = () => {
 
@@ -14,6 +15,8 @@ const titleTabs = ["We define investment","Connect with investors"
 
 const textTabs = ["We define the necessary investment","we connect you with global investors" 
                   ,"We guide you in the implementation of these investments"]
+const labelsChart = ["Investment","Profits"];
+
                   
     return (
 
@@ -32,9 +35,13 @@ const textTabs = ["We define the necessary investment","we connect you with glob
              }}
              transition={{ duration: 3,type: "spring" ,ease:'easeInOut', delay:0.9}}
                 
-         className='whyus-button btn btn-primary'>Talk with us.</motion.button>       
+         className='me-button btn btn-primary'>Talk with us.</motion.button>       
       </div>
               <Tabs  titleTabs={titleTabs} textTabs={textTabs} />
+              <div className='chart-pages'>
+              <h1>Your Stats Will Fly With Us</h1>     
+              <BarChart   dataChartLabels={labelsChart} />  
+              </div>
             </Page>
         </>
     );

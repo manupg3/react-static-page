@@ -47,4 +47,20 @@ float: right;
     .row.principal {
         padding-bottom: 4%;
     }
+
+    @media screen and (max-width:767px){
+        .row.footer-bottom{
+           display: contents;
+        }
+        h4.text-footer-buttons {
+          
+            font-size: 2rem;
+           margin-bottom: 1rem;
+        }
+        .ul-footer{
+            text-align: center;
+            padding-left: 0px ;
+        }
+
+    }
     

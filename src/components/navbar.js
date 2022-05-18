@@ -5,13 +5,23 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../assets/css/styleheader.css';
 import Button from 'react-bootstrap/Button';
 import {Link, Route, Routes} from 'react-router-dom'
+import { useState } from 'react';
+import { LinkContainer } from 'react-router-bootstrap'
 
 
 
 
 export default function Header(){
+  const [close, setClose] = useState(false);
+  const closeNav = () => setClose(true);
 
-    return(
+  const handleClose = e =>{
+  
+    console.log("E TARGET", );
+    
+  }
+
+  return(
 
         <Navbar collapseOnSelect expand="lg" bg="white" className="navbar" variant="dark">
   <Container>
@@ -19,12 +29,14 @@ export default function Header(){
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-
-      <Link className="nav-link" to="/">Home</Link>
- 
-      <Link className="nav-link" to="/about" >About Us</Link>
+    <LinkContainer to="/">
+     <Nav.Link className="nav-link"  >Home</Nav.Link>
+     </LinkContainer>
+     <LinkContainer to="/about">
+      <Nav.Link className="nav-link" >About Us</Nav.Link>
+      </LinkContainer>
       <NavDropdown className="nav-links" title="Services" id="collasible-nav-dropdown">
-        <NavDropdown.Item > <Link className="nav-link" to="/management">Management</Link>
+        <NavDropdown.Item > <Link  className="nav-link" to="/management">Management</Link>
      </NavDropdown.Item>
         <NavDropdown.Item > <Link className="nav-link" to="/invest">Invest</Link>
      </NavDropdown.Item>
@@ -36,7 +48,9 @@ export default function Header(){
       </NavDropdown>
     </Nav>
     <Nav>
-      <Link className="nav-link cmr"  to="/contact">Contact</Link>
+    <LinkContainer to="/contact">
+      <Nav.Link className="nav-link cmr">Contact</Nav.Link>
+    </LinkContainer>
       <Button className="btn-docs">Help Center
       </Button>
         
@@ -44,6 +58,7 @@ export default function Header(){
   </Navbar.Collapse>
   </Container>
 </Navbar>
+   
 
     )
 }

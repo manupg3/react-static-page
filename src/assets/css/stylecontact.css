@@ -44,3 +44,9 @@ outline: none !important;
     padding-bottom: 3% !important;
     margin-top: 4%;
 }
+
+@media screen and (max-width:767px){
+    .fields-form input{
+        width: 100%;
+    }
+}

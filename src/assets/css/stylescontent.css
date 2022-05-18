@@ -177,7 +177,7 @@
     display: flex !important;
     flex-direction: row;
 }
-canvas{
+.chart-home{
     height: 500px !important;
     width: 500px !important;
     margin-left: 64px;
@@ -185,8 +185,20 @@ canvas{
     box-shadow: 1px 1px 87px 1px #c2c2c275;
     border-radius: 6px;
 }
+.chart-pages{
+
+    text-align: center;
+    margin-right: 15% !important;
+    margin-left: 15% !important;
+    padding: 2%;
+    box-shadow: 1px 1px 87px 1px #c2c2c275;
+    border-radius: 6px;
+    margin-bottom: 7%;
+    margin-top: 10%;
+}
 .st-col{
 }
+
 .st-col-first{
     padding-top: 11%;
     padding-left: 4%;
@@ -259,10 +271,35 @@ canvas{
 }
 
 @media screen and (max-width:767px) {
-      
+    .subtitle-page{
+        padding-left: 2%;
+        padding-right: 2%;
+    }  
+    .st-text{
+          padding-left: 10% !important;
+          padding-right: 10% !important;
+      }
+      .whyus-text{
+        padding-left: 10% !important;
+        padding-right: 10% !important;   
+      }
         .content {
             width: fit-content;
     }
+    .chart-home{
+        height: 300px !important;
+        width: 300px !important;
+        margin-left: 0px;
+        padding: 2%;
+        box-shadow: 1px 1px 87px 1px #c2c2c275;
+        border-radius: 6px;
+    }
+    
+.title-pages{
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    padding-top: 4rem;
+}
       
 }
 
