@@ -1,7 +1,6 @@
 .navbar{
     padding-top: 19px !important;
     padding-bottom: 19px !important;
-border-bottom: 1px solid #6c757d45;
 font-weight: 400;
 position: fixed !important;
 top: 0 !important;
@@ -15,7 +14,7 @@ button.navbar-toggler.collapsed{
     height: 60px;
 }
 div#responsive-navbar-nav{
-    text-align: center;
+    text-align: left;
 }
 
 .navbar-dark .navbar-toggler
@@ -26,7 +25,8 @@ div#responsive-navbar-nav{
 }
 .navbar-dark .navbar-nav .nav-link{
     color: #6c757d !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
+    font-size: 1rem;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
     color: black !important;
@@ -57,6 +57,9 @@ div#responsive-navbar-nav{
     
 }
 @media screen and (max-width:990px){
+    .navbar-dark .navbar-nav .nav-link{
+        border-bottom: 1px solid #8080804f;
+    }
     .nav-link{
         font-size: 22px;
         font-weight: 700 !important;
@@ -75,4 +78,12 @@ div#responsive-navbar-nav{
         max-width: 100% !important;
     }
     
+}
+@media screen and (max-width:767px){
+    button.btn-docs.btn.btn-primary {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 1% !important;
+        margin-top: 4%;
+    }
 }

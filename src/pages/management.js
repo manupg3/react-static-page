@@ -35,7 +35,7 @@ const labelsChart = ["Management","Profits"];
              }}
              transition={{ duration: 3,type: "spring" ,ease:'easeInOut', delay:0.9}}
                 
-         className='me-button btn btn-primary'>Talk with us.</motion.button>       
+         className='whyus-button btn btn-primary'>Talk with us.</motion.button>       
       </div>
               <Tabs  titleTabs={titleTabs} textTabs={textTabs}/>
               <div className='chart-pages'>

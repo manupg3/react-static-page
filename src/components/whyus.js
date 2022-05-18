@@ -16,7 +16,7 @@ export default function () {
      
         <motion.button
          whileTap={{scale: 1.1,}}
-         className="me-button btn btn-primary">Learn More</motion.button>  
+         className="whyus-button btn btn-primary">Learn More</motion.button>  
         </div>
   )
 }

@@ -36,14 +36,26 @@ export default function Header(){
       <Nav.Link className="nav-link" >About Us</Nav.Link>
       </LinkContainer>
       <NavDropdown className="nav-links" title="Services" id="collasible-nav-dropdown">
-        <NavDropdown.Item > <Link  className="nav-link" to="/management">Management</Link>
+        <NavDropdown.Item >
+        <LinkContainer to="/management">
+           <Nav.Link  className="nav-link" >Management</Nav.Link>
+           </LinkContainer>
      </NavDropdown.Item>
-        <NavDropdown.Item > <Link className="nav-link" to="/invest">Invest</Link>
+        <NavDropdown.Item > 
+          <LinkContainer to="/invest">
+        <Nav.Link className="nav-link" >Invest</Nav.Link>
+        </LinkContainer>
      </NavDropdown.Item>
-        <NavDropdown.Item > <Link className="nav-link" to="/advisor">Advisor</Link>
+        <NavDropdown.Item > 
+        <LinkContainer to="/advisor">
+          <Nav.Link className="nav-link" to="/advisor">Advisor</Nav.Link>
+          </LinkContainer>
      </NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item > <Link className="nav-link" to="/how-it-works">How it works?</Link>
+        <NavDropdown.Item > 
+        <LinkContainer to="/how-it-works">
+          <Nav.Link className="nav-link" >How it works?</Nav.Link>
+          </LinkContainer>
      </NavDropdown.Item>
       </NavDropdown>
     </Nav>
